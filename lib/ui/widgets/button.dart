@@ -22,7 +22,7 @@ class MyButton extends StatelessWidget {
         height: 45,
         child: Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
           textAlign: TextAlign.center,

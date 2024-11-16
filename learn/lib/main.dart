@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learn/View/Box.dart';
 import 'package:learn/View/homepage.dart';
 import 'package:get/get.dart';
 import 'package:learn/View/screen1.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
             name: "/",
-            page: () => Homepage(),
+            page: () => const Homepage(),
              middlewares: [AuthMiddleWare()]
             ),
         GetPage(name: "/m1", page: () => Screen1())

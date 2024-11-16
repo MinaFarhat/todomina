@@ -1,11 +1,14 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 import 'package:rxdart/rxdart.dart';
+// ignore: depend_on_referenced_packages
 import 'package:timezone/data/latest.dart' as tz;
+// ignore: depend_on_referenced_packages
 import 'package:timezone/timezone.dart' as tz;
 
 import '/models/task.dart';
@@ -44,7 +47,7 @@ class NotifyHelper {
       initializationSettings,
       onSelectNotification: (String? payload) async {
         if (payload != null) {
-          debugPrint('notification payload: ' + payload);
+          debugPrint('notification payload: $payload');
         }
         selectNotificationSubject.add(payload!);
       },
@@ -208,7 +211,7 @@ class NotifyHelper {
 
   void _configureSelectNotificationSubject() {
     selectNotificationSubject.stream.listen((String payload) async {
-      debugPrint('My payload is ' + payload);
+      debugPrint('My payload is $payload');
       await Get.to(() => NotificationScreen(payload: payload));
     });
   }

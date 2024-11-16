@@ -1,3 +1,5 @@
+// ignore_for_file: curly_braces_in_flow_control_structures, avoid_print, empty_catches
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -227,7 +229,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
       Get.snackbar(
         "Required",
         "All Fields are Required",
-        duration: Duration(milliseconds: 2500),
+        duration: const Duration(milliseconds: 2500),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Get.isDarkMode ? Colors.white : darkGreyClr,
         colorText: Get.isDarkMode ? darkGreyClr : Colors.white,
@@ -305,14 +307,14 @@ class _AddTaskPageState extends State<AddTaskPage> {
   }
 
   _getDatefromUser() async {
-    DateTime? _pickedDate = await showDatePicker(
+    DateTime? pickedDate = await showDatePicker(
       context: context,
       initialDate: _selectedDate,
       firstDate: DateTime(2015),
       lastDate: DateTime(2030),
     );
-    if (_pickedDate != null)
-      setState(() => _selectedDate = _pickedDate);
+    if (pickedDate != null)
+      setState(() => _selectedDate = pickedDate);
     else
       print("it's null or somthing is wrong!");
   }

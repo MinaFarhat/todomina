@@ -139,19 +139,19 @@ class _HomePageState extends State<HomePage> {
         selectedTextColor: Colors.white,
         selectionColor: primaryClr,
         dateTextStyle: GoogleFonts.lato(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: primaryClr,
         )),
         dayTextStyle: GoogleFonts.lato(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.bold,
           color: primaryClr,
         )),
         monthTextStyle: GoogleFonts.lato(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.bold,
           color: primaryClr,
@@ -248,8 +248,8 @@ class _HomePageState extends State<HomePage> {
                       : Axis.vertical,
                   children: [
                     SizeConfig.orientation == Orientation.landscape
-                        ? SizedBox(height: 6)
-                        : SizedBox(height: 250),
+                        ? const SizedBox(height: 6)
+                        : const SizedBox(height: 250),
                     SvgPicture.asset(
                       "images/task.svg",
                       color: primaryClr.withOpacity(0.5),
@@ -266,8 +266,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     SizeConfig.orientation == Orientation.landscape
-                        ? SizedBox(height: 120)
-                        : SizedBox(height: 180),
+                        ? const SizedBox(height: 120)
+                        : const SizedBox(height: 180),
                   ],
                 ),
               ),

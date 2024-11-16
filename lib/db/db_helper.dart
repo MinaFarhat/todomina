@@ -1,11 +1,13 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:todoapp/models/task.dart';
 
 class DBHelper {
   static Database? _db;
-  static  int _virsion = 1;
-  static  String _tableName = "tasks";
+  static  const int _virsion = 1;
+  static  const String _tableName = "tasks";
 
   static Future<void> initDB() async {
     if (_db != null) {
@@ -13,9 +15,9 @@ class DBHelper {
       return;
     } else {
       try {
-        String _path = await getDatabasesPath() + "task.db";
+        String path = "${await getDatabasesPath()}task.db";
         debugPrint("in database");
-        _db = await openDatabase(_path, version: _virsion,
+        _db = await openDatabase(path, version: _virsion,
             onCreate: (Database db, int version) async {
           // When creating the db, create the table
           await db.execute(
@@ -29,6 +31,8 @@ class DBHelper {
               );
         });
       } catch (e) {
+        // ignore: duplicate_ignore
+        // ignore: avoid_print
         print(e);
       }
     }

@@ -8,5 +8,6 @@ class AuthMiddleWare extends GetMiddleware {
     if (sharedpref!.getString("id") != null) {
       return const RouteSettings(name: "/m");
     }
+    return null;
   }
 }

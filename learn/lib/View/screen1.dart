@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:learn/Controller/homecontroller.dart';
 
+// ignore: must_be_immutable
 class Screen1 extends StatelessWidget {
  Screen1({Key? key}) : super(key: key);
 //final e = Get.lazyPut(()=>Homecontroller());
@@ -20,7 +19,7 @@ class Screen1 extends StatelessWidget {
                 onPressed: () {
                   controller.increment();
                 },
-                icon: Icon(Icons.add)),
+                icon: const Icon(Icons.add)),
             GetBuilder<Homecontroller>(
               builder: (controller) => Text(controller.counter.toString()),
             ),
@@ -28,7 +27,7 @@ class Screen1 extends StatelessWidget {
                 onPressed: () {
                   controller.deccrement();
                 },
-                icon: Icon(Icons.minimize)),
+                icon: const Icon(Icons.minimize)),
           ],
         ),
       ),

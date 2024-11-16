@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todoapp/ui/theme.dart';
@@ -35,7 +37,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
         ),
         elevation: 0,
-        backgroundColor: context.theme.colorScheme.background,
+        backgroundColor: context.theme.colorScheme.surface,
         title: Text(
           _payload.toString().split('|')[0],
           style: TextStyle(
@@ -91,8 +93,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Icon(
                             Icons.text_format,
                             size: 35,
@@ -114,15 +116,15 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       const SizedBox(height: 10),
                       Text(
                         _payload.toString().split('|')[0],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       const SizedBox(height: 30),
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Icon(
                             Icons.description,
                             size: 35,
@@ -150,8 +152,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         textAlign: TextAlign.justify,
                       ),
                       const SizedBox(height: 30),
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Icon(
                             Icons.calendar_today_rounded,
                             size: 35,
@@ -173,7 +175,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       const SizedBox(height: 10),
                       Text(
                         _payload.toString().split('|')[2],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
