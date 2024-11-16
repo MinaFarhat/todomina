@@ -34,7 +34,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.surface,
       appBar: _appbar(),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -206,7 +206,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
         ),
       ),
       elevation: 0,
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.surface,
       actions: const [
         Padding(
           padding: EdgeInsets.only(right: 10),

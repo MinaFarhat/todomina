@@ -10,20 +10,20 @@ const primaryClr = bluishClr;
 const Color darkGreyClr = Color(0xFF121212);
 const Color darkHeaderClr = Color(0xFF424242);
 
-class Themes {
-  static final light = ThemeData(
-    primaryColor: primaryClr,
-    backgroundColor: Colors.white,
-    brightness: Brightness.light,
-  );
-  static final dark = ThemeData(
-    primaryColor: darkGreyClr,
-    backgroundColor: darkGreyClr,
-    brightness: Brightness.dark,
-  );
+// class Themes {
+//   static final light = ThemeData(
+//     primaryColor: primaryClr,
+//     backgroundColor: Colors.white,
+//     brightness: Brightness.light,
+//   );
+//   static final dark = ThemeData(
+//     primaryColor: darkGreyClr,
+//     backgroundColor: darkGreyClr,
+//     brightness: Brightness.dark,
+//   );
 
 
- }
+//  }
  TextStyle get headingStyle {
     return GoogleFonts.lato(
         textStyle: TextStyle(

@@ -6,15 +6,12 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:todoapp/controllers/task_controller.dart';
-import 'package:todoapp/db/db_helper.dart';
 import 'package:todoapp/models/task.dart';
 import 'package:todoapp/services/notification_services.dart';
 import 'package:todoapp/services/theme_services.dart';
 import 'package:todoapp/ui/pages/add_task_page.dart';
-import 'package:todoapp/ui/pages/notification_screen.dart';
 import 'package:todoapp/ui/theme.dart';
 import 'package:todoapp/ui/widgets/button.dart';
-import 'package:todoapp/ui/widgets/input_field.dart';
 import 'package:todoapp/ui/widgets/task_tile.dart';
 
 import '../size_config.dart';
@@ -44,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.surface,
       appBar: _appbar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +74,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       elevation: 0,
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.surface,
       actions: [
 
          IconButton(

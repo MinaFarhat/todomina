@@ -7,7 +7,6 @@ import 'package:intl/intl.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:todoapp/ui/theme.dart';
 
 import '/models/task.dart';
 import '/ui/pages/notification_screen.dart';

@@ -54,13 +54,13 @@ class InputField extends StatelessWidget {
                       hintStyle: SubTitleStyle,
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
-                          color: context.theme.backgroundColor,
+                          color: context.theme.colorScheme.surface,
                           width: 0,
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
-                          color: context.theme.backgroundColor,
+                          color: context.theme.colorScheme.surface,
                            width: 0,
                         ),
                       ),
